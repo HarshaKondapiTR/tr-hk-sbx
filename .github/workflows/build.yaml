@@ -32,3 +32,10 @@ jobs:
           echo "GitHub automatically masks secrets in logs:"
           echo "Raw secret would show as: ${{ secrets.API_KEY }}"
           echo "Notice how it appears as *** in the logs"
+
+      - name: Check secret length
+        run: |
+           SECRET_LENGTH=${#API_KEY}
+           echo "Your secret is $SECRET_LENGTH characters long"
+        env:
+            API_KEY: ${{ secrets.API_KEY }}
