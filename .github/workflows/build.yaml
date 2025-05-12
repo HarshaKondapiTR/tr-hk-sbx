@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: Create config.json
-        # run: |
+        run: |
         #   echo '{
         #     "apiKey": "${{ secrets.API_KEY }}",
         #   }' > config.json
