@@ -1,0 +1,23 @@
+name: Build Config
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Create conf.json with variables
+        run: |
+          echo '{
+            "apiEndpoint": "${{ vars.API_ENDPOINT }}",
+            "timeoutSeconds": ${{ vars.TIMEOUT_SECONDS }},
+            # "featureFlags": ${{ vars.FEATURE_FLAGS }}
+          }' > config.json
+      
+      - name: Show generated config
+        run: cat conf.json
