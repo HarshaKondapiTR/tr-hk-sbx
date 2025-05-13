@@ -11,13 +11,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Create conf.json with variables
-        run: |
-          echo '{
-            "apiEndpoint": "${{ vars.API_ENDPOINT }}",
-            "timeoutSeconds": ${{ vars.TIMEOUT_SECONDS }},
-            # "featureFlags": ${{ vars.FEATURE_FLAGS }}
-          }' > conf.json
+      # - name: Create conf.json with variables
+      #   run: |
+      #     echo '{
+      #       "apiEndpoint": "${{ vars.API_ENDPOINT }}",
+      #       "timeoutSeconds": ${{ vars.TIMEOUT_SECONDS }},
+      #       # "featureFlags": ${{ vars.FEATURE_FLAGS }}
+      #     }' > conf.json
       
-      - name: Show generated config
-        run: cat conf.json
+      # - name: Show generated config
+      #   run: cat conf.json
+
+      - name: Replace variables in config.json
+        run: |
+          sed -i 's|${ddEventKey}|${{ vars.ddEventKey }}|g' config.json
