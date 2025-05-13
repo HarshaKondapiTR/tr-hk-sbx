@@ -24,4 +24,4 @@ jobs:
 
       - name: Replace variables in config.json
         run: |
-          sed -i 's|${ddEventKey}|${{ vars.ddEventKey }}|g' config.json
+          sed -i 's|${ddEventKey}|${{ vars.ddEventKey }}|g' conf.json
