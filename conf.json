@@ -419,7 +419,7 @@
         },
         {
             "key": "CASETEXT_OAUTH_CLIENT_ID",
-            "value": "rNzctitSmQlG1Lh3gz6T1Nnl74ys7I4e",
+            "value": "${CASETEXT_OAUTH_CLIENT_ID}",
             "variableType": "env",
             "hint": "QA Token (Authorization Profiles)",
             "scope": "prePopulated",
@@ -432,7 +432,7 @@
         },
         {
             "key": "CASETEXT_OAUTH_CLIENT_SECRET",
-            "value": "khVOtHEEeVxHq6C9",
+            "value": "${CASETEXT_OAUTH_CLIENT_SECRET}",
             "variableType": "env",
             "hint": "QA Token (Authorization Profiles)",
             "scope": "prePopulated",
@@ -458,7 +458,7 @@
         },
         {
             "key": "CASETEXT_COVEO_API_CLIENT_ID",
-            "value": "qIclWHwDJ61cmf7PDXSUHktStvdSEdP3",
+            "value": "${CASETEXT_COVEO_API_CLIENT_ID}",
             "variableType": "env",
             "hint": "Coveo (Authorization Profiles)",
             "scope": "prePopulated",
@@ -471,7 +471,7 @@
         },
         {
             "key": "CASETEXT_COVEO_API_CLIENT_SECRET",
-            "value": "5Foms7QfSqQWljDd",
+            "value": "${CASETEXT_COVEO_API_CLIENT_SECRET}",
             "variableType": "env",
             "hint": "Coveo (Authorization Profiles)",
             "scope": "prePopulated",
